@@ -16,11 +16,13 @@ const CallToAction = () => {
                     Join thousands of Victorians using GreenGrid to lower their bills and their environmental impact.
                 </p>
             </div>
-            <button 
-                className="px-10 py-4 bg-white hover:bg-stone-100 text-green-800 text-lg font-bold rounded-full transition-colors z-10"
-            >
-                Create Free Account
-            </button>
+            <Link to="/register">
+                <button 
+                    className="px-10 py-4 bg-white hover:bg-stone-100 text-green-800 text-lg font-bold rounded-full transition-colors z-10"
+                >
+                    Create Free Account
+                </button>
+            </Link>
         </section>
     )
 }
