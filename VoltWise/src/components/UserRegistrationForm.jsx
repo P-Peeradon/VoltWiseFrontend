@@ -2,7 +2,7 @@ import InfoIcon from '../assets/info.svg'
 
 const UserRegistrationForm = () => {
     return (
-        <form className="flex flex-row justify-start items-start gap-16">
+        <div className="flex flex-row justify-start items-start gap-16">
             {/* Main Input Section */}
             <div className="w-1/2 p-8 bg-stone-100 rounded-[48px] space-y-6">
                 {/* Full Name Field */}
@@ -55,7 +55,7 @@ const UserRegistrationForm = () => {
                     ensuring your energy offsets are 100% accurate to your neighborhood.
                 </p>
             </aside>
-        </form>
+        </div>
     )
 }
 
