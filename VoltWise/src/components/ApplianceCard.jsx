@@ -4,6 +4,7 @@ const ApplianceCard = ({ device, isSelected, onToggle, children }) => {
     return (
         <button
             onClick={() => onToggle(device)}
+            type="button"
             aria-pressed={isSelected}
             className={`group relative p-6 rounded-4xl text-left transition-all duration-200 border-2 flex flex-col gap-4 min-h-40 w-full
                 ${isSelected 
