@@ -15,7 +15,7 @@ const UserRegisterBody = () => {
                     {/* Privacy Info Group */}
                     <div className="flex items-center gap-4">
                         {/* Icon Wrapper */}
-                        <div className="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-full flex justify-center items-center text-green-800">
+                        <div className="shrink-0 w-12 h-12 bg-green-500/20 rounded-full flex justify-center items-center text-green-800">
                             {/* Replace this div with your Privacy SVG logo */}
                             <img src={PrivacyIcon} />
                         </div>
