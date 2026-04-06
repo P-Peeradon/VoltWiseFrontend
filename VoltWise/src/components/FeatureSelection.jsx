@@ -1,5 +1,8 @@
 import React from 'react'
 import FeatureCard from './FeatureCard'
+import GridIcon from '../assets/thunder.svg';
+import EmissionIcon from '../assets/leaf.svg';
+import AlertIcon from '../assets/bell.svg'
 
 const FeatureSelection = () => {
     return (
@@ -17,7 +20,7 @@ const FeatureSelection = () => {
                         </h2>
                     </div>
                 </hgroup>
-                <div className="self-stretch inline-flex flex-col justify-start items-start">
+                <div className="flex flex-row justify-start items-start gap-8">
                     <FeatureCard 
                         name={"Live Grid Status"} 
                         description={`
@@ -26,20 +29,20 @@ const FeatureSelection = () => {
                                 exactly when wind and solar are
                                 peaking.
                         `}
-                        tone={"green"}
-                        fileName={"/thunder.svg"}
-                    />
+                    >
+                        <img className='w-14 h-14 rounded-full ms-7 mt-7 p-2 bg-green-500/20' src={GridIcon} />
+                    </FeatureCard>
                     <FeatureCard 
                         name={"Emission Tracking"} 
                         description={`
                             Track your personal carbon footprint
                                 based on your actual device usage and
-                                the grid&apos;s carbon intensity at that
+                                the grid's carbon intensity at that
                                 moment.
                         `}
-                        tone={"yellow"}
-                        fileName={"/leaf.svg"}
-                    />
+                    >
+                        <img className='w-14 h-14 rounded-full ms-7 mt-7 p-2 bg-yellow-600/20' src={EmissionIcon} />
+                    </FeatureCard>
                     <FeatureCard
                         name={"Smart Alerts"} 
                         description={`
@@ -47,9 +50,10 @@ const FeatureSelection = () => {
                                 run heavy appliances, ensuring you use
                                 the cleanest energy available.
                         `}
-                        tone={"yellow"}
-                        fileName={"/bell.svg"}
-                    />
+                        file={AlertIcon}
+                    >
+                        <img className='w-14 h-14 rounded-full ms-7 mt-7 p-2 bg-green-500/20' src={AlertIcon} />
+                    </FeatureCard>
                 </div>
             </div>
         </section>
