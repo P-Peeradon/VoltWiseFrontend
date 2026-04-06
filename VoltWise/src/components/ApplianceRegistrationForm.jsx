@@ -30,7 +30,7 @@ const ApplianceRegistrationForm = () => {
     };
 
     return (
-        <form className="w-full max-w-4xl flex flex-col gap-8">
+        <div className="w-full max-w-4xl flex flex-col gap-8">
             {/* Header Section */}
             <header className="flex justify-between items-end w-full">
                 <div>
@@ -58,7 +58,7 @@ const ApplianceRegistrationForm = () => {
                     ))
                 }
             </div>
-        </form>
+        </div>
   );
 }
 
