@@ -2,6 +2,7 @@ import React from 'react'
 import RegisterBanner from './RegisterBanner'
 import UserRegistrationForm from './UserRegistrationForm'
 import ApplianceRegistrationForm from './ApplianceRegistrationForm'
+import PrivacyIcon from '../assets/privacy.svg'
 
 const UserRegisterBody = () => {
     return (
@@ -15,17 +16,17 @@ const UserRegisterBody = () => {
                     <div className="flex items-center gap-4">
                         {/* Icon Wrapper */}
                         <div className="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-full flex justify-center items-center text-green-800">
-                        {/* Replace this div with your Privacy SVG logo */}
-                        <div className="w-4 h-5 bg-current" aria-hidden="true" />
+                            {/* Replace this div with your Privacy SVG logo */}
+                            <img src={PrivacyIcon} />
                         </div>
 
                         <div className="flex flex-col">
-                        <h4 className="text-neutral-700 text-sm font-bold leading-5">
-                            Privacy Guaranteed
-                        </h4>
-                        <p className="text-neutral-700 text-sm font-normal leading-5">
-                            Data stays encrypted in Victoria.
-                        </p>
+                            <h4 className="text-neutral-700 text-sm font-bold leading-5">
+                                Privacy Guaranteed
+                            </h4>
+                            <p className="text-neutral-700 text-sm font-normal leading-5">
+                                Data stays encrypted in Victoria.
+                            </p>
                         </div>
                     </div>
 
