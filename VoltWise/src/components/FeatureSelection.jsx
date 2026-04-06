@@ -25,7 +25,7 @@ const FeatureSelection = () => {
                         name={"Live Grid Status"} 
                         description={`
                             Stay informed with real-time updates
-                                on Victoria&apos;s energy generation. Know
+                                on Victoria's energy generation. Know
                                 exactly when wind and solar are
                                 peaking.
                         `}
