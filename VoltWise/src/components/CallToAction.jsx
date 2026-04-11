@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 
 const CallToAction = () => {
     return (
-        <section className="w-full max-w-4xl px-8 md:px-12 pt-12 md:pt-16 pb-12 relative bg-green-800 rounded-[32px] md:rounded-[48px] flex flex-col justify-start items-center gap-6 overflow-hidden">
+        <section className="w-[calc(100%-2rem)] md:w-full max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-12 relative bg-green-800 rounded-[32px] md:rounded-[48px] flex flex-col justify-start items-center gap-6 overflow-hidden box-border">
             <div className="w-64 h-64 left-auto right-[-80px] md:left-192 -top-28 absolute opacity-20 bg-green-500 rounded-full" aria-hidden="true" />
             <div className="space-y-4 max-w-2xl z-10">
                 <h2
