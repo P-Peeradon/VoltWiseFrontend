@@ -4,6 +4,8 @@ import 'dotenv/config'
 
 const SignUpForm = () => {
     const [email, setEmail] = useState("")
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [error, setError] = useState("")
@@ -11,6 +13,15 @@ const SignUpForm = () => {
     const handleEmail = (event) => {
         setEmail(event.target.value)
     }
+
+    const handleFirstName = (event) => {
+        setFirstName(event.target.value)
+    }
+
+    const handleLastName = (event) => {
+        setLastName(event.target.value)
+    }
+
 
     const handlePassword = (event) => {
         setPassword(event.target.value)
@@ -37,7 +48,9 @@ const SignUpForm = () => {
             try {
                 await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/register`, {
                     email: email,
-                    password: password
+                    password: password,
+                    firstName: firstName,
+                    lastName: lastName
                 })
             } catch (err) {
                 setError(err?.message ?? "Error during sign up process")
@@ -63,9 +76,11 @@ const SignUpForm = () => {
                 className="w-full flex flex-col gap-6"
                 onSubmit={handleSignUp}
             >
-                {error && <p>{error}</p>}
+                {error && (<p className="mt-2 text-red-600 text-sm font-medium font-['Plus_Jakarta_Sans'] animate-in fade-in slide-in-from-top-1">
+                    {error}
+                </p>)}
                 <div className="flex flex-col gap-1.5">
-                    <label for="email" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Email Address</label>
+                    <label htmlFor="email" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Email Address</label>
                     <input 
                         type="email" 
                         id="email" 
@@ -76,8 +91,39 @@ const SignUpForm = () => {
                     />
                 </div>
 
+                <div className="self-stretch inline-flex justify-start items-center gap-2.5">
+                    <div className="flex-1 flex flex-col gap-1.5">
+                        <label htmlFor="firstName" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">
+                            First Name
+                        </label>
+                        <input 
+                            id="firstName"
+                            type="text"
+                            placeholder="First Name"
+                            className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 
+                            placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none"
+                            onChange={handleFirstName}
+                        />
+                    </div>
+
+                    {/* Last Name Group */}
+                    <div className="flex-1 flex flex-col gap-1.5">
+                        <label htmlFor="lastName" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">
+                            Last Name
+                        </label>
+                        <input 
+                            id="lastName"
+                            type="text"
+                            placeholder="Last Name"
+                            className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 
+                            placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none"
+                            onChange={handleLastName}
+                        />
+                    </div>
+                </div>
+
                 <div className="flex flex-col gap-1.5">
-                    <label for="password" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Password</label>
+                    <label htmlFor="password" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Password</label>
                     <input 
                         type="password" 
                         id="password" 
@@ -89,7 +135,7 @@ const SignUpForm = () => {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                    <label for="verify-password" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Verify Password</label>
+                    <label htmlFor="verify-password" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Verify Password</label>
                     <input 
                         type="password" 
                         id="verify-password" 
