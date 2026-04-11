@@ -22,44 +22,44 @@ const devices = [
 const ApplianceRegistrationForm = () => {
     const [selectedDevices, setSelectedDevices] = useState([])
     const toggleDevice = (device) => {
-        setSelectedDevices((prev) => 
-        prev.includes(device) 
-            ? prev.filter(item => item !== device) // Remove if exists
-            : [...prev, device]                   // Add if new
+        setSelectedDevices((prev) =>
+            prev.includes(device)
+                ? prev.filter(item => item !== device) // Remove if exists
+                : [...prev, device]                   // Add if new
         );
     };
 
     return (
         <div className="w-full max-w-4xl flex flex-col gap-8">
             {/* Header Section */}
-            <header className="flex justify-between items-end w-full">
+            <header className="flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-4 md:gap-0">
                 <div>
                     <h2 className="text-stone-900 text-2xl font-bold">Household Devices</h2>
                     <p className="text-neutral-700 text-base">Select all that apply to your current residence.</p>
                 </div>
                 <div className="flex items-center gap-2 text-green-800 uppercase tracking-widest font-semibold text-sm">
-                <span className="w-3 h-3 bg-green-800 rounded-full animate-pulse" />
+                    <span className="w-3 h-3 bg-green-800 rounded-full animate-pulse" />
                     Smart detection active
                 </div>
             </header>
 
             {/* Grid Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                {devices.map((device) =>                 
-                     (       
-                        <ApplianceCard 
-                            key={device.id}
-                            device={device}
-                            isSelected={selectedDevices.includes(device)}
-                            onToggle={toggleDevice}
-                        >
-                           {device?.logo && <img src={device.logo} alt={device.sub} /> }
-                        </ApplianceCard>
-                    ))
+                {devices.map((device) =>
+                (
+                    <ApplianceCard
+                        key={device.id}
+                        device={device}
+                        isSelected={selectedDevices.includes(device)}
+                        onToggle={toggleDevice}
+                    >
+                        {device?.logo && <img src={device.logo} alt={device.sub} />}
+                    </ApplianceCard>
+                ))
                 }
             </div>
         </div>
-  );
+    );
 }
 
 export default ApplianceRegistrationForm

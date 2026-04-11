@@ -6,8 +6,8 @@ import PrivacyIcon from '../assets/privacy.svg'
 
 const UserRegisterBody = () => {
     return (
-        <main className="w-7xl px-6 py-20 flex justify-center items-center">
-            <form className="w-4xl max-w-4xl inline-flex flex-col justify-start items-start gap-12">
+        <main className="w-full max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20 flex justify-center items-center">
+            <form className="w-full max-w-4xl flex flex-col justify-start items-start gap-8 md:gap-12">
                 <RegisterBanner />
                 <UserRegistrationForm />
                 <ApplianceRegistrationForm />
@@ -31,7 +31,7 @@ const UserRegisterBody = () => {
                     </div>
 
                     {/* Submit Button */}
-                    <button 
+                    <button
                         type="submit"
                         className="w-full md:w-auto px-12 py-5 bg-green-800 hover:bg-green-900 text-white text-lg font-bold rounded-full transition-all shadow-lg shadow-green-900/10 active:scale-95"
                     >
