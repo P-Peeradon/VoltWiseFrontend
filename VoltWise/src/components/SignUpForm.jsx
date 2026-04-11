@@ -35,7 +35,7 @@ const SignUpForm = () => {
         else {
             setError("")
             try {
-                await axios.post(`${process.env.}/api/auth/register`, {
+                await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/register`, {
                     email: email,
                     password: password
                 })
