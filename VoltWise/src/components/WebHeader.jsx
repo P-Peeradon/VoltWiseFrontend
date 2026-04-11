@@ -3,12 +3,12 @@ import { Link } from 'react-router'
 
 const WebHeader = () => {
     return (
-        <header className="w-7xl left-0 top-0 absolute bg-stone-100 inline-flex flex-col justify-start items-start">
-            <nav className="w-full max-w-480 px-12 py-6 inline-flex justify-between items-center">
+        <header className="w-full left-0 top-0 absolute bg-stone-100 inline-flex flex-col justify-start items-start">
+            <nav className="w-full px-6 md:px-12 py-6 inline-flex justify-between items-center">
                 <div className="inline-flex flex-col justify-start items-start">
                     <h1 className="w-28 h-8 justify-center text-green-800 text-2xl font-bold leading-8">GreenGrid</h1>
                 </div>
-                <nav className="flex justify-start items-center gap-8">
+                <nav className="hidden md:flex justify-start items-center gap-8">
                     <Link className="pb-1 border-b-2 border-green-800 inline-flex flex-col justify-start items-start" to="/" >
                         <p className="w-12 h-6 justify-center text-green-800 text-base font-semibold leading-6">
                             Home

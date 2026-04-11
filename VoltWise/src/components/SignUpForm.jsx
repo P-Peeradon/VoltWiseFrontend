@@ -35,7 +35,7 @@ const SignUpForm = () => {
         event.preventDefault()
         if (!email || !password || !confirmPassword) {
             setError("Error: Please enter email and password")
-            return; 
+            return;
         }
 
         if (password !== confirmPassword) {
@@ -59,9 +59,9 @@ const SignUpForm = () => {
     }
 
     return (
-        <section 
-            className="w-157.5 p-12 bg-white rounded-[48px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] 
-            inline-flex flex-col justify-start items-center"
+        <section
+            className="w-full max-w-[630px] p-6 md:p-12 bg-white rounded-[32px] md:rounded-[48px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] 
+            flex flex-col justify-start items-center mx-auto box-border"
         >
             <header className="text-center mb-10">
                 <h1 className="text-stone-900 text-4xl font-extrabold font-['Plus_Jakarta_Sans'] leading-10 mb-2">
@@ -72,7 +72,7 @@ const SignUpForm = () => {
                 </p>
             </header>
 
-            <form 
+            <form
                 className="w-full flex flex-col gap-6"
                 onSubmit={handleSignUp}
             >
@@ -81,22 +81,22 @@ const SignUpForm = () => {
                 </p>)}
                 <div className="flex flex-col gap-1.5">
                     <label htmlFor="email" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Email Address</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        placeholder="name@example.com" 
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="name@example.com"
                         className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 
                         placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
                         onChange={handleEmail}
                     />
                 </div>
 
-                <div className="self-stretch inline-flex justify-start items-center gap-2.5">
-                    <div className="flex-1 flex flex-col gap-1.5">
+                <div className="self-stretch flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4 sm:gap-2.5 w-full">
+                    <div className="flex-1 flex flex-col gap-1.5 w-full">
                         <label htmlFor="firstName" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">
                             First Name
                         </label>
-                        <input 
+                        <input
                             id="firstName"
                             type="text"
                             placeholder="First Name"
@@ -107,11 +107,11 @@ const SignUpForm = () => {
                     </div>
 
                     {/* Last Name Group */}
-                    <div className="flex-1 flex flex-col gap-1.5">
+                    <div className="flex-1 flex flex-col gap-1.5 w-full">
                         <label htmlFor="lastName" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">
                             Last Name
                         </label>
-                        <input 
+                        <input
                             id="lastName"
                             type="text"
                             placeholder="Last Name"
@@ -124,10 +124,10 @@ const SignUpForm = () => {
 
                 <div className="flex flex-col gap-1.5">
                     <label htmlFor="password" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Password</label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        placeholder="••••••••" 
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="••••••••"
                         className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 
                         placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
                         onChange={handlePassword}
@@ -136,18 +136,18 @@ const SignUpForm = () => {
 
                 <div className="flex flex-col gap-1.5">
                     <label htmlFor="verify-password" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Verify Password</label>
-                    <input 
-                        type="password" 
-                        id="verify-password" 
-                        placeholder="••••••••" 
+                    <input
+                        type="password"
+                        id="verify-password"
+                        placeholder="••••••••"
                         className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 
                         placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
                         onChange={handleConfirmPassword}
                     />
                 </div>
 
-                <button 
-                    type="submit" 
+                <button
+                    type="submit"
                     className="w-full py-4 mt-2 bg-green-500 hover:bg-green-600 transition-colors rounded-full text-green-950 
                     text-base font-bold font-['Plus_Jakarta_Sans']"
                 >
@@ -162,13 +162,13 @@ const SignUpForm = () => {
             </div>
 
             <button className="w-full py-4 bg-stone-100 rounded-full border border-stone-300/20 flex justify-center items-center gap-3 hover:bg-stone-200 transition-colors">
-                <img src="/google-icon.svg" alt="" className="w-5 h-5" />
+                <span className="w-5 h-5 bg-neutral-200"></span>
                 <span className="text-stone-900 text-base font-medium font-['Plus_Jakarta_Sans']">Continue with Google</span>
             </button>
 
             <footer class="mt-6 text-center">
                 <p class="text-neutral-700 text-base font-normal font-['Plus_Jakarta_Sans']">
-                    Already have an account? 
+                    Already have an account?
                     <span class="text-green-800 font-bold hover:underline">Sign In</span>
                 </p>
             </footer>

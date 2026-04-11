@@ -6,23 +6,23 @@ import AlertIcon from '../assets/bell.svg'
 
 const FeatureSelection = () => {
     return (
-        <section className="self-stretch px-12 py-24 bg-stone-100 inline-flex flex-col justify-start items-start">
-            <div className="w-full max-w-480 flex flex-col justify-start items-start gap-16">
+        <section className="self-stretch px-6 md:px-12 py-16 md:py-24 bg-stone-100 inline-flex flex-col justify-start items-start">
+            <div className="w-full max-w-7xl mx-auto flex flex-col justify-start items-center md:items-start gap-12 md:gap-16">
                 <hgroup className="self-stretch flex flex-col justify-start items-start gap-4">
                     <div className="self-stretch flex flex-col justify-start items-center">
-                        <h1 className="w-[514.16px] h-10 text-center justify-center text-stone-900 text-4xl font-extrabold leading-10">
+                        <h1 className="w-full md:max-w-[514px] h-auto md:h-10 text-center justify-center text-stone-900 text-3xl md:text-4xl font-extrabold md:leading-10">
                             Intelligent Energy Stewardship
                         </h1>
                     </div>
                     <div className="self-stretch flex flex-col justify-start items-center">
-                        <h2 className="w-[462.98px] h-7 text-center justify-center text-neutral-700 text-lg font-normal leading-7">
+                        <h2 className="w-full md:max-w-[462px] h-auto md:h-7 text-center justify-center text-neutral-700 text-base md:text-lg font-normal md:leading-7">
                             Powerful tools designed for a cleaner, greener Victoria.
                         </h2>
                     </div>
                 </hgroup>
-                <div className="flex flex-row justify-start items-start gap-8">
-                    <FeatureCard 
-                        name={"Live Grid Status"} 
+                <div className="flex flex-col lg:flex-row justify-start items-center lg:items-start gap-8 w-full">
+                    <FeatureCard
+                        name={"Live Grid Status"}
                         description={`
                             Stay informed with real-time updates
                                 on Victoria's energy generation. Know
@@ -32,8 +32,8 @@ const FeatureSelection = () => {
                     >
                         <img className='w-14 h-14 rounded-full ms-7 mt-7 p-2 bg-green-500/20' src={GridIcon} />
                     </FeatureCard>
-                    <FeatureCard 
-                        name={"Emission Tracking"} 
+                    <FeatureCard
+                        name={"Emission Tracking"}
                         description={`
                             Track your personal carbon footprint
                                 based on your actual device usage and
@@ -44,7 +44,7 @@ const FeatureSelection = () => {
                         <img className='w-14 h-14 rounded-full ms-7 mt-7 p-2 bg-yellow-600/20' src={EmissionIcon} />
                     </FeatureCard>
                     <FeatureCard
-                        name={"Smart Alerts"} 
+                        name={"Smart Alerts"}
                         description={`
                             Get notified when it&apos;s the best time to
                                 run heavy appliances, ensuring you use
