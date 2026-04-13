@@ -4,7 +4,7 @@ import GoogleIcon from '../assets/google-icon.svg'
 
 const LoginForm = () => {
     return (
-        <main className="w-157.5 p-12 bg-white rounded-[48px] shadow-lg flex flex-col items-center font-['Plus_Jakarta_Sans']">
+        <main className="w-157.5 p-12 bg-white rounded-[48px] shadow-lg flex flex-col items-center">
             {/* Header Section */}
             <header className="text-center mb-10">
                 <h1 className="text-stone-900 text-4xl font-extrabold leading-10">
