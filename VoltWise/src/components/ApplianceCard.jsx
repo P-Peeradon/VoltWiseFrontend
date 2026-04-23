@@ -1,15 +1,17 @@
 import React from 'react'
+import Card from './ui/Card'
 
 const ApplianceCard = ({ device, isSelected, onToggle, children }) => {
     return (
-        <button
+        <Card
+            as="button"
             onClick={() => onToggle(device)}
             type="button"
             aria-pressed={isSelected}
-            className={`group relative p-6 rounded-4xl text-left transition-all duration-200 border-2 flex flex-col gap-4 min-h-40 w-full
-                ${isSelected 
-                    ? 'bg-green-800 border-green-800 text-white shadow-lg' 
-                    : 'bg-white border-transparent hover:border-stone-200 text-stone-900 shadow-sm'
+            className={`group relative p-6 text-left transition-all duration-200 border-2 flex flex-col gap-4 min-h-40 w-full
+                ${isSelected
+                    ? 'bg-green-800 border-green-800 text-white shadow-lg'
+                    : 'border-transparent hover:border-stone-200 text-stone-900 shadow-sm'
                 }`
             }
         >
@@ -37,7 +39,7 @@ const ApplianceCard = ({ device, isSelected, onToggle, children }) => {
                     </svg>
                 )}
             </div>
-        </button>
+        </Card>
     )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroSection from './HeroSection'
-import FeatureSelection from './FeatureSelection'
-import CallToAction from './CallToAction'
+import FeatureSelection from '../FeatureSelection'
+import CallToAction from '../sections/CallToAction'
 
 const LandingBody = () => {
     return (

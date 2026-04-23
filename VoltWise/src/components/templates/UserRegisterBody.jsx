@@ -1,5 +1,5 @@
 import React from 'react'
-import RegisterBanner from './RegisterBanner'
+import RegisterBanner from './sections/RegisterBanner'
 import UserRegistrationForm from './UserRegistrationForm'
 import ApplianceRegistrationForm from './ApplianceRegistrationForm'
 import PrivacyIcon from '../assets/privacy.svg'

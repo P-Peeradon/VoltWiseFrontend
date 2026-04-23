@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import ApplianceCard from './ApplianceCard';
+import ApplianceCard from './ui/ApplianceCard';
 import EVLogo from '../assets/ev.svg'
 import BatteryLogo from '../assets/battery.svg'
 import CookTopLogo from '../assets/cooktop.svg'
